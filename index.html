@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gabriel Carlos Cavalcante">
-    <meta name="description" content="Resolvendo desafios proposto pelo curso 
-    Introdução Prática ao TypeScript da DIO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gabriel Carlos Cavalcante" />
+    <meta
+      name="description"
+      content="Resolvendo desafios proposto pelo curso 
+    Introdução Prática ao TypeScript da DIO"
+    />
     <title>Desafios Digital Innovation One</title>
-    <script src="script.ts" defer></script>
-</head>
-<body>
-    <h4>Valor a ser adicionado: <input id="soma"> </h4>
-    <button id="atualizar-saldo">Atualizar saldo</button>
-    <button id="limpar-saldo">Limpar seu saldo</button>
-    <h1>"Seu saldo é: " <span id="campo-saldo"></span></h1>
-</body>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+
+ <div class="container">     
+  <div class="item-container">
+      <input id="login" placeholder="Login" >
+      <input id="senha" placeholder="Senha" type="password" >
+      <input id="api-key" placeholder="Api Key">
+      <button id="login-button" disabled>Login</button>
+  </div>
+  <div id="search-container">
+      <input id="search" placeholder="Escreva...">
+      <button id="search-button">Pesquisar Filme</button>
+  </div>
+</div>
+    <script src="script.ts" ></script>
+
+  </body>
 </html>
