@@ -1,29 +1,25 @@
-interface IPessoa {
-    nome: string,
-    idade: number,
-    profissao: string
+let botaoAtualizar = document.getElementById('atualizar-saldo') as HTMLButtonElement;
+let botaoLimpar = document.getElementById('limpar-saldo') as HTMLButtonElement;
+let soma = document.getElementById('soma')  as HTMLInputElement;
+let campoSaldo = document.getElementById('campo-saldo')  as HTMLSpanElement;
+let cont: number  = 0
+
+campoSaldo.innerHTML = cont
+
+function somarAoSaldo(soma): void {
+    cont += Number(soma);
+    campoSaldo.innerHTML = cont
 }
-let pessoa1: IPessoa = {
-    nome: "Gabriel",
-    idade: 17,
-    profissao: "Programador"
+
+function limparSaldo() {
+    cont = 0
+    campoSaldo.innerHTML = '0';
 }
-let pessoa2: IPessoa = {
-    nome: "Rafael",
-    idade: 17,
-    profissao: "Auxiliar Adiministrativo"
-}
-let pessoa3: IPessoa = {
-    nome: "Felipe",
-    idade: 25,
-    profissao: "Presidente da Santa Rita"
-}
-let pessoa4: IPessoa = {
-    nome: "Francisca",
-    idade: 17,
-    profissao: "Monitoramento"
-}
-console.log(pessoa1);
-console.log(pessoa2);
-console.log(pessoa3);
-console.log(pessoa4);
+
+botaoAtualizar.addEventListener('click', function () {
+    somarAoSaldo(soma.value);
+});
+
+botaoLimpar.addEventListener('click', function () {
+    limparSaldo();
+});
